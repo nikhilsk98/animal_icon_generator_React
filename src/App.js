@@ -1,8 +1,9 @@
+import "./App.css";
 import { useState } from "react";
-import AnimalsShow from "./animalsShow";
+import AnimalsShow from "./AnimalsShow";
 
 function getRandomAnimal() {
-  const animals = ["bird", "cat", "dog", "gator", "horse", "cow"];
+  const animals = ["bird", "cat", "dog", "gator", "horse", "cow", "heart"];
 
   return animals[Math.floor(Math.random() * animals.length)];
 }
@@ -18,7 +19,7 @@ function App() {
   });
 
   return (
-    <div>
+    <div className="app">
       <button onClick={handleClick}>Click here!</button>
       <div>{renderedAnimals}</div>
     </div>
